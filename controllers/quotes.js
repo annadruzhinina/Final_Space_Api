@@ -10,10 +10,10 @@ export const getQuotes = async (req, res) => {
   }
 };
 
-export const getQuote1 = async (req, res) => {
+export const getQuotes1 = async (req, res) => {
   try {
     const { id } = req.params;
-    const quotes1 = await Quotes.findById(id).populate("members");
+    const quotes1 = await Quotes.findById(id);
 
     if (quotes1) {
       return res.json(quotes1);
