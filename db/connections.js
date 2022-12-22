@@ -3,7 +3,9 @@ import chalk from "chalk";
 
 mongoose.set("returnOriginal", false);
 
-mongoose.connect("mongodb://127.0.0.1:27017/Final_Space_Api").catch((err) => {
+const url = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/Final_Space_Api"
+
+mongoose.connect(url).catch((err) => {
   console.log(`Error connection to MongoDB: ${err.message}`);
 });
 
