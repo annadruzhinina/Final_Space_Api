@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 import chalk from "chalk";
 
-mongoose.set("returnOriginal", false);
+// mongoose.set("returnOriginal", false);
+mongoose.set("strictQuery", false);
+
+mongoose.connect(process.env.MONGO_URL);
 
 const url = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/Final_Space_Api"
 
