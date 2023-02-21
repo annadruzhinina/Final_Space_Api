@@ -8,10 +8,9 @@ let Characters = new Schema({
   gender: String,
   hair: String,
   alias: [String],
-    origin: String,
-    abilities: [String],
-    img_url: String,
-  },
-);
+  origin: String,
+  abilities: [String],
+  img_url: String,
+});
 
 export default mongoose.model("characters", Characters);
